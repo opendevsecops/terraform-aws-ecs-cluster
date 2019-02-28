@@ -3,6 +3,8 @@ module "vpc" {
 
   cidr_block        = "${var.vpc_cidr_block}"
   subnet_cidr_block = "${var.vpc_subnet_cidr_block}"
+
+  tags = "${var.tags}"
 }
 
 module "cluster" {
@@ -10,5 +12,11 @@ module "cluster" {
 
   name = "${var.name}"
 
-  depends_on = ["module.vpc.vpc_id"]
+  tags = "${var.tags}"
+}
+
+module "roles" {
+  source = "modules/roles"
+
+  tags = "${var.tags}"
 }

@@ -15,19 +15,19 @@ output "arn" {
 }
 
 output "task_role_arn" {
-  value = "${module.cluster.task_role_arn}"
+  value = "${module.roles.task_role_arn}"
 }
 
 output "task_role_name" {
-  value = "${module.cluster.task_role_name}"
+  value = "${module.roles.task_role_name}"
 }
 
 output "execution_role_arn" {
-  value = "${module.cluster.execution_role_arn}"
+  value = "${module.roles.execution_role_arn}"
 }
 
 output "execution_role_name" {
-  value = "${module.cluster.execution_role_name}"
+  value = "${module.roles.execution_role_name}"
 }
 
 output "vpc_id" {

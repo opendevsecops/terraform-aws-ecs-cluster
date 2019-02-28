@@ -10,6 +10,10 @@ variable "vpc_subnet_cidr_block" {
   description = "The cluster subnet cidr block"
 }
 
+variable "tags" {
+  default = {}
+}
+
 # depends_on workaround
 
 variable "depends_on" {
