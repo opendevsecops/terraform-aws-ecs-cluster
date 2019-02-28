@@ -45,7 +45,7 @@ resource "aws_iam_role" "execution_role" {
 EOF
 }
 
-resource "aws_iam_role_policy" "execution_role_policy" {
+resource "aws_iam_role_policy" "execution_role_default_policy" {
   role = "${aws_iam_role.execution_role.name}"
 
   policy = <<EOF
