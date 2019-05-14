@@ -6,8 +6,12 @@ output "vpc_cidr_block" {
   value = "${var.vpc_cidr_block}"
 }
 
-output "vpc_subnet_cidr_block" {
-  value = "${var.vpc_subnet_cidr_block}"
+output "vpc_public_subnet_cidr_block" {
+  value = "${var.vpc_public_subnet_cidr_block}"
+}
+
+output "vpc_private_subnet_cidr_block" {
+  value = "${var.vpc_private_subnet_cidr_block}"
 }
 
 output "arn" {
@@ -34,6 +38,10 @@ output "vpc_id" {
   value = "${module.vpc.id}"
 }
 
-output "vpc_subnet_id" {
-  value = "${module.vpc.subnet_id}"
+output "vpc_public_subnet_id" {
+  value = "${module.vpc.public_subnet_id}"
+}
+
+output "vpc_private_subnet_id" {
+  value = "${module.vpc.private_subnet_id}"
 }
